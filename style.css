@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --sidebar-bgcolor: #1992d4;
+    --buttons: #1992d4;
+    --main-content-bgcolor: #e2e8f0;
+    --card-lines: #efb123;
+    --white: #ffffff;
+    --black: black;
+    --text-secondary: #636363;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+/*  */
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+#sidebar{
+    background-color: var(--sidebar-bgcolor);
+    height: auto;
+    padding: 20px;
+}
+
+#dashboard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--white);
+    gap: 8px;
+}
+
+#dashboard > svg{
+    width: 35px;
+    fill: var(--white);
+}
+
+#dashboard h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#icons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+    padding: 0 5px;
+}
+
+.icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--white);
+    gap: 18px;
+}
+
+.icon>svg{
+    width: 20px;
+    fill: var(--white);
+}
+
+.icon>p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#main{
+    background-color: var(--main-content-bgcolor);
+    height: auto;
+}
+
+#header{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    justify-content: space-between;
+    box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.3); 
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar svg{
+    width: 25px;
+}
+
+#search{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.form-input{
+    width: 550px;
+    background-color: var(--main-content-bgcolor);
+    border-radius: 10px;
+    border: 1px solid var(--main-content-bgcolor);
+}
+
+#noti-profile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+#noti-profile h6{
+    font-size: 14px;
+}
+
+.profile-img{
+    width: 40px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+#profile{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user-id{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#name{
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+#name{
+    font-size: 12px;
+}
+#buttons{
+    display: flex;
+    gap: 20px;
+}
+
+#buttons button{
+    width: 80px;
+    height: 35px;
+    background-color: var(--buttons);
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#buttons button:hover{
+    cursor: pointer;
+    background-color: var(--main-content-bgcolor);
+    color: var(--buttons);
+}
+
+#main-content{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+#section1{
+margin-right: 20px;
+}
+
+#cards{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card{
+    width: 48%;
+    padding: 20px;
+    background-color: var(--white);
+    border-left: 5px solid var(--card-lines);
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card p{
+    color: var(--text-secondary);
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.card-footer svg{
+    width: 20px;
+}
+
+#announcements{
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#announcements h6{
+    font-size: 14px;
+}
+
+#announcements p{
+    font-size: 14px;
+    line-height: 1;
+    color: var(--text-secondary);
+}
+
+#announcements hr{
+    margin: 10px 0;
+}
+
+#trending{
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-id{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.profile-name p{
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+/* sidebar */
+#mobile-sidebar{
+    display: none;
+}
+#noti-profile svg:first-child{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #container{
+        display: grid;
+        grid-template-columns:  100%;
+    }
+
+    #sidebar{
+        display: none;
+    }
+
+    #main{
+        max-width: 100%;
+    }
+    
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    
+    #profile{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #main-content{
+        margin: 10px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #section1{
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    #cards{
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    
+    .card{
+        width: 100%;
+    }
+    
+    /*mobile sidebar */
+    
+    #mobile-sidebar{
+        display: block;
+    }
+    
+    #search{
+        display: none;
+    }
+
+    #noti-profile svg:first-child{
+        display: block;
+    }
+
+    #noti-profile h6{
+        display: none;
+    }
+}
